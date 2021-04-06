@@ -32,7 +32,7 @@ arcpy.env.overwriteOutput = True
 # printArc() function from pg 453 of 'Python For ArcGIS'
 def printArc(message):
     '''Print message for Script Tool and standard output'''
-    print message
+    print(message)
     arcpy.AddMessage(message)
 
 
