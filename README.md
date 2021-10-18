@@ -1,1 +1,8 @@
-# TSI_Tools
+# Background
+Terrain Shape Index (TSI) is a micro-scale landform index presented by Henry McNab in a 1989 article in the Forest Science journal. The index itself attempts to describe the shape of terrain surrounding a plot center using elevation. TSI is a useful forestry metric as it has shown to correlate very closely with an area’s site index, or the relationship of a species’ height and its age. Due to the labor-intensive nature of finding the elevation at nine points in the field, an automated tool that estimates the TSI using elevation rasters for a study area is extremely useful.
+
+# TSI_Tools Python Script
+The Python script has three main steps. Given point features for the plot centers, it first creates a new feature set of points in each cardinal and sub-cardinal direction with a user-supplied buffer. The script then extracts elevation values for the original plot centers and the newly generated points from elevation rasters provided by the user. Lastly, these elevation values are used to calculate the TSI value for each plot center and appends the value as a new attribute field. This Python script was written in Python 2.7 and is able to be used as a standalone script in conjunction with Esri's ArcPy library.
+
+# TSI_Tools ArcGIS Toolbox
+The script was also added to an ArcGIS toolbox and a tool GUI was created to allow users with no intention of scripting to use the tool as well. This toolbox is included in the repository. To use, download the .tbx file and add the containing folder as a connection in ArcMap. When the tool is run through ArcMap, the GUI will lead you through the required inputs with tool tips. This toolbox was developed for use with ArcMap. __It has not been tested with ArcGIS Pro.__
